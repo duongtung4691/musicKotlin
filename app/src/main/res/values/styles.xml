@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="ActionBar">
+        <attr name="title" format="string">title</attr>
+        <attr name="leftTitleButton" format="string">title_leftButton</attr>
+        <attr name="rightTitleButton" format="string">title_rightButton</attr>
+        <attr name="imageLeftButton" format="integer">src_leftButton</attr>
+        <attr name="imageRightButton" format="integer">src_rightButton</attr>
+    </declare-styleable>
+</resources>

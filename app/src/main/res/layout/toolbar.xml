@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="actionbar"
+            type="com.duongtung.musicexample.model.ActionBarMode"/>
+
+        <import
+            type="android.view.View"/>
+    </data>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/toolbar_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@{actionbar.titleRight}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold"
+            android:visibility="@{actionbar.titleRight==null?View.GONE:View.VISIBLE}"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{actionbar.title}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold"
+            android:visibility="@{actionbar.title==null?View.GONE:View.VISIBLE}"/>
+
+        <TextView
+            android:id="@+id/toolbar_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@{actionbar.titleLeft}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold"
+            android:visibility="@{actionbar.titleLeft==null?View.GONE:View.VISIBLE}"/>
+    </android.support.v7.widget.Toolbar>
+</layout>
